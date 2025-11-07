@@ -1,0 +1,407 @@
+/*colors*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  display: block;
+  margin: auto;
+  width: 100%;
+  background-color: #ffffff;
+  color: #123c69;
+}
+
+article {
+  margin: 0 24px 0 24px;
+}
+
+.button.button-primary,
+button.button-primary {
+  color: #eee2dc;
+  background-color: #c65a7f;
+  border-color: #c65a7f;
+  text-decoration: none;
+}
+.button.button-primary:hover,
+button.button-primary:hover {
+  background-color: #ac3b61;
+  border-color: #ac3b61;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+header {
+  background-image: url(/images/zed.jpg);
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: #eee2dc;
+}
+header .intro__content {
+  font-size: 1.8rem;
+  margin: 10rem 0 5rem 0;
+  padding: 5rem;
+  text-align: center;
+  font-style: italic;
+  letter-spacing: 0.2rem;
+  background: rgba(18, 60, 105, 0.7333333333);
+  width: 48%;
+}
+header .intro__content--text {
+  font-size: 3rem;
+}
+header .intro__content--claim {
+  font-size: 1.5rem;
+}
+header .intro__content--autor {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+header .intro__content--autor:after {
+  content: "";
+  display: block;
+  width: 24rem;
+  height: 0.2rem;
+  background-color: #ac3b61;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 992px) {
+  header {
+    background-image: url(/images/zed-tablet.jpg);
+  }
+  header .intro__content {
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 460px;
+  }
+}
+@media (max-width: 576px) {
+  header {
+    background-image: url(/images/zed-mobil.jpg);
+  }
+  header .intro__content {
+    padding: 0;
+  }
+}
+/*o-mne*/
+.o-mne a {
+  text-decoration: underline;
+  font-weight: 600;
+  color: #123c69;
+}
+.o-mne a:hover {
+  text-decoration: none;
+  font-weight: 700;
+  color: #ac3b61;
+}
+.o-mne__souhrn {
+  display: flex;
+  flex-direction: column;
+}
+.o-mne__souhrn .o-mne__text h5 {
+  text-align: center;
+}
+.o-mne__souhrn .o-mne__info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.o-mne__souhrn .o-mne__info .o-mne__praxe,
+.o-mne__souhrn .o-mne__info .o-mne__vzdelani,
+.o-mne__souhrn .o-mne__info .o-mne__certifikaty {
+  max-width: 400px;
+}
+.o-mne__souhrn .o-mne__info .o-mne__praxe h5,
+.o-mne__souhrn .o-mne__info .o-mne__vzdelani h5,
+.o-mne__souhrn .o-mne__info .o-mne__certifikaty h5 {
+  font-weight: 400;
+  color: #ac3b61;
+}
+.o-mne__souhrn .o-mne__info .o-mne__praxe img,
+.o-mne__souhrn .o-mne__info .o-mne__vzdelani img,
+.o-mne__souhrn .o-mne__info .o-mne__certifikaty img {
+  max-width: 400px;
+}
+@media (max-width: 992px) {
+  .o-mne__souhrn .o-mne__info .o-mne__praxe,
+  .o-mne__souhrn .o-mne__info .o-mne__vzdelani,
+  .o-mne__souhrn .o-mne__info .o-mne__certifikaty {
+    max-width: 800px;
+  }
+}
+
+/*jak-pracuji*/
+.jak-pracuji h5 {
+  text-align: center;
+}
+.jak-pracuji__temata {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.jak-pracuji__tema {
+  padding: 2rem;
+  background-color: #eee2dc;
+  border-radius: 8px;
+  width: 300px;
+}
+.jak-pracuji__tema h6 {
+  text-align: center;
+  font-weight: bold;
+  color: #ac3b61;
+}
+.jak-pracuji .tlacitko {
+  margin: 2rem auto 2rem auto;
+  text-align: center;
+}
+
+/*gestalt-terapie*/
+.gestalt-terapie a {
+  text-decoration: underline;
+  font-weight: 600;
+  color: #123c69;
+}
+.gestalt-terapie a:hover {
+  text-decoration: none;
+  font-weight: 700;
+  color: #ac3b61;
+}
+
+.ja-a-gestalt h5 {
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+.ja-a-gestalt h5:after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 0.2rem;
+  background-color: #ac3b61;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.8rem;
+}
+
+/*reference*/
+/*cenik*/
+.cenik__karta {
+  background-color: #eee2dc;
+  padding: 0.5em;
+  text-align: center;
+  border-radius: 4px;
+  padding: 4rem;
+  min-width: 240px;
+}
+.cenik__nabidka {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/*podminky*/
+.podminky__seznam {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.podminky__seznam .podminky__body {
+  width: 30%;
+  margin: 0 auto 4rem auto;
+  min-width: 240px;
+}
+.podminky__seznam .podminky__body--nadpis {
+  margin-bottom: 0.8rem;
+}
+.podminky__seznam .podminky__body--nadpis:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ac3b61;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.8rem;
+}
+.podminky a {
+  text-decoration: underline;
+  font-weight: 600;
+  color: #123c69;
+}
+.podminky a:hover {
+  text-decoration: none;
+  font-weight: 700;
+  color: #ac3b61;
+}
+
+/*kontakt*/
+.kontakt h5,
+.kontakt .kontakt__udaje {
+  text-align: center;
+  font-weight: 400;
+}
+.kontakt a {
+  text-decoration: underline;
+  font-weight: 600;
+  color: #123c69;
+}
+.kontakt a:hover {
+  text-decoration: none;
+  font-weight: 700;
+  color: #ac3b61;
+}
+.kontakt__foto {
+  text-align: center;
+  margin: auto;
+}
+.kontakt__foto img {
+  height: 150px;
+  border-radius: 50%;
+}
+.kontakt .svg__in svg:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.kontakt__misto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.kontakt__karta {
+  background-color: #eee2dc;
+  padding: 0.5em;
+  text-align: center;
+  border-radius: 4px;
+  min-width: 240px;
+}
+
+/*footer*/
+.foot {
+  background-color: #ffffff;
+  margin-top: 8rem;
+}
+.foot__copy {
+  text-align: center;
+  margin: 0;
+}
+
+article ul {
+  list-style: circle inside;
+}
+
+article ol {
+  list-style: decimal inside;
+}
+
+article ol,
+article ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+article li {
+  margin-bottom: 1rem;
+}
+
+/*nav*/
+div.header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(18, 60, 105, 0.7333333333);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header #menu-toggle {
+  display: none;
+}
+.header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 1.5rem;
+  padding: 0.5rem;
+  margin: 0;
+}
+.header ul li {
+  list-style-type: none;
+  padding: 2px;
+}
+.header ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  color: #eee2dc;
+}
+.header ul li:hover {
+  background-color: #eee2dc;
+  border-radius: 8px;
+}
+.header ul li:hover a {
+  color: #123c69;
+}
+.header ul li #svg-home:hover,
+.header ul li #home:hover {
+  transform: scale(1.1, 1.1);
+  padding: 0;
+}
+.header ul li #svg-home:hover path,
+.header ul li #home:hover path {
+  stroke: #123c69;
+}
+@media (max-width: 768px) {
+  .header #menu {
+    flex-direction: column;
+    text-align: right;
+    gap: 0.2rem;
+    display: none;
+  }
+  .header #home {
+    margin-top: -40px;
+  }
+  .header #menu-toggle {
+    display: block;
+    text-align: right;
+    padding-right: 0.5rem;
+    height: 4rem;
+    cursor: pointer;
+  }
+  .header #menu-toggle p {
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    color: #eee2dc;
+  }
+}
+
+.hide {
+  display: none;
+}/*# sourceMappingURL=style.css.map */

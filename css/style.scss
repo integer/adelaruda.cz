@@ -1,0 +1,458 @@
+/*colors*/
+$background-color-main: #ffffff;
+$background-color-sub: #bab2b5bb;
+$background-color-button-hover: #ac3b61;
+$background-color-button: #c65a7f;
+$font-color-button: #eee2dc;
+$font-color: #123c69;
+$font-color-sub: #ac3b61;
+
+$text-align-center: center;
+
+@mixin row-style() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+@mixin a-style() {
+  text-decoration: underline;
+  font-weight: 600;
+  color: $font-color;
+
+  &:hover {
+    text-decoration: none;
+    font-weight: 700;
+    color: $font-color-sub;
+  }
+}
+
+@mixin karta-style() {
+  // border: 2px solid $font-color;
+  background-color: $font-color-button;
+  padding: 0.5em;
+  text-align: center;
+  border-radius: 4px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+@mixin body-style() {
+  @include row-style();
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  display: block;
+  margin: auto;
+  width: 100%;
+  //padding: 0.2rem;
+  background-color: $background-color-main;
+  color: $font-color;
+}
+
+article {
+  margin: 0 24px 0 24px;
+}
+
+.button.button-primary,
+button.button-primary {
+  color: $font-color-button;
+  background-color: $background-color-button;
+  border-color: $background-color-button;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $background-color-button-hover;
+    border-color: $background-color-button-hover;
+  }
+}
+
+h3 {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+header {
+  background-image: url(/images/zed.jpg);
+  background-size: cover;
+  //margin: 6rem 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: $font-color-button;
+
+  .intro__content {
+    font-size: 1.8rem;
+    margin: 10rem 0 5rem 0;
+    padding: 5rem;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 0.2rem;
+    background: #123c69bb;
+    width: 48%;
+
+    &--text {
+      font-size: 3rem;
+    }
+    &--claim {
+      font-size: 1.5rem;
+    }
+
+    &--autor {
+      font-size: 3rem;
+      text-transform: uppercase;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 24rem;
+        height: 0.2rem;
+        background-color: $font-color-sub;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  header {
+    background-image: url(/images/zed-tablet.jpg);
+
+    .intro__content {
+      //background-color: pink;
+      width: 100%;
+      margin-bottom: 0;
+      margin-top: 460px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    background-image: url(/images/zed-mobil.jpg);
+
+    .intro__content {
+      padding: 0;
+    }
+  }
+}
+
+/*o-mne*/
+.o-mne {
+  a {
+    @include a-style();
+  }
+
+  &__souhrn {
+    display: flex;
+    flex-direction: column;
+
+    .o-mne__text{
+        h5{
+          text-align: center;
+        }
+      }
+
+    .o-mne__info {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .o-mne__praxe,
+      .o-mne__vzdelani,
+      .o-mne__certifikaty {
+        max-width: 400px;
+
+        h5 {
+          font-weight: 400;
+          color: $font-color-sub;
+        }
+        img {
+          max-width: 400px;
+        }
+        @media (max-width: 992px) {
+          max-width: 800px;
+        }
+      }
+    }
+  }
+}
+
+/*jak-pracuji*/
+.jak-pracuji {
+  h5 {
+    text-align: center;
+  }
+
+  &__temata {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  &__tema {
+    padding: 2rem;
+    background-color: $font-color-button;
+    border-radius: 8px;
+    width: 300px;
+
+    h6 {
+      text-align: center;
+      font-weight: bold;
+      color: $font-color-sub;
+    }
+  }
+
+  .tlacitko {
+    margin: 2rem auto 2rem auto;
+    text-align: center;
+  }
+}
+
+/*gestalt-terapie*/
+.gestalt-terapie {
+  a {
+    @include a-style();
+  }
+}
+
+.ja-a-gestalt {
+  h5 {
+    margin-bottom: 0.8rem;
+    text-align: center;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 0.2rem;
+      background-color: $font-color-sub;
+      margin-bottom: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0.8rem;
+    }
+  }
+}
+
+/*reference*/
+/*cenik*/
+.cenik {
+  &__karta {
+    @include karta-style();
+    padding: 4rem;
+    min-width: 240px;
+  }
+
+  &__nabidka {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+}
+
+/*podminky*/
+.podminky {
+  &__seznam {
+    @include body-style();
+
+    .podminky__body {
+      width: 30%;
+      margin: 0 auto 4rem auto;
+      min-width: 240px;
+
+      &--nadpis {
+        margin-bottom: 0.8rem;
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: $font-color-sub;
+          margin-bottom: 15px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 0.8rem;
+        }
+      }
+    }
+  }
+
+  a {
+    @include a-style();
+  }
+}
+
+/*kontakt*/
+.kontakt {
+  h5,
+  .kontakt__udaje {
+    text-align: center;
+    font-weight: 400;
+  }
+  a {
+    @include a-style();
+  }
+
+  &__foto {
+    text-align: center;
+    margin: auto;
+
+    img {
+      height: 150px;
+      border-radius: 50%;
+    }
+  }
+
+  .svg__in {
+    svg {
+      &:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__misto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  &__karta {
+    @include karta-style();
+    min-width: 240px;
+  }
+}
+
+/*footer*/
+.foot {
+  background-color: $background-color-main;
+  margin-top: 8rem;
+
+  &__copy {
+    text-align: $text-align-center;
+    margin: 0;
+  }
+}
+
+article ul {
+  list-style: circle inside;
+}
+article ol {
+  list-style: decimal inside;
+}
+article ol,
+article ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+article li {
+  margin-bottom: 1rem;
+}
+
+/*nav*/
+div.header {
+  position: sticky;
+  top: 0;
+  background-color: #123c69bb;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header {
+  #menu-toggle {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1.5rem;
+    padding: 0.5rem;
+    margin: 0;
+
+    li {
+      list-style-type: none;
+      padding: 2px;
+      a {
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 0.2rem;
+        color: $font-color-button;
+      }
+
+      &:hover {
+        background-color: $font-color-button;
+        border-radius: 8px;
+        a {
+          color: $font-color;
+        }
+      }
+      #svg-home:hover,
+      #home:hover {
+        transform: scale(1.1, 1.1);
+        padding: 0;
+        path {
+          stroke: $font-color;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    #menu {
+      flex-direction: column;
+      text-align: right;
+      gap: 0.2rem;
+      display: none;
+    }
+
+    #home {
+      margin-top: -40px;
+    }
+    #menu-toggle {
+      display: block;
+      text-align: right;
+      padding-right: 0.5rem;
+      height: 4rem;
+      cursor: pointer;
+
+      p {
+        font-weight: 600;
+        letter-spacing: 0.2rem;
+        color: $font-color-button;
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
