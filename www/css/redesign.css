@@ -1,0 +1,160 @@
+/** Nové a větší písmo Pridi od Google Fonts **/
+
+.pridi-extralight {
+    font-family: "Pridi", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.pridi-light {
+    font-family: "Pridi", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.pridi-regular {
+    font-family: "Pridi", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pridi-medium {
+    font-family: "Pridi", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.pridi-semibold {
+    font-family: "Pridi", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.pridi-bold {
+    font-family: "Pridi", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: "Pridi", serif;
+    font-size: x-large;
+    font-weight: 300; /** Lehčí základní písmo **/
+}
+
+/** Celková stránka je širší **/
+.container {
+    max-width: 1320px;
+}
+
+/** Větší a tučnější nadpisy sekcí - zatím jen pro porovnání **/
+.jak-pracuji__tema h5 {
+    font-size: 2.7rem;
+    font-weight: bolder;
+    color: #ac3b61;
+}
+
+/** Větší šířka bloků v sekci o mně **/
+.o-mne__souhrn .o-mne__info .o-mne__praxe,
+.o-mne__souhrn .o-mne__info .o-mne__vzdelani,
+.o-mne__souhrn .o-mne__info .o-mne__certifikaty {
+    max-width: 47%;
+}
+
+/** Hlavička bez průhlednosti **/
+div.header {
+    background-color: #123c69;
+}
+
+/** Odkazy bez podtržení a bez změny tučnosti **/
+.o-mne a {
+    font-weight: inherit;
+}
+.o-mne a:hover {
+    font-weight: inherit;
+}
+
+.gestalt-terapie a {
+    font-weight: inherit;
+}
+.gestalt-terapie a:hover {
+    font-weight: inherit;
+}
+
+.podminky a {
+    font-weight: inherit;
+}
+.podminky a:hover {
+    font-weight: inherit;
+}
+
+.kontakt a {
+    font-weight: 500;
+}
+.kontakt a:hover {
+    font-weight: 500;
+}
+
+/** Větší nadpisy podsekcí v sekci o mně **/
+.o-mne__souhrn .o-mne__info .o-mne__praxe h5, .o-mne__souhrn .o-mne__info .o-mne__vzdelani h5, .o-mne__souhrn .o-mne__info .o-mne__certifikaty h5 {
+    font-weight: 400;
+    font-size: xx-large;
+}
+
+/** Podmínky víc jako body? **/
+.podminky__seznam .podminky__body {
+    background-color: aliceblue;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 32%;
+}
+
+/** Větší nadpisy bodů podmínek **/
+.podminky__seznam .podminky__body--nadpis {
+    font-size: xx-large;
+    font-weight: 500;
+}
+
+/** Větší odsazení položek v menu **/
+.header ul {
+    margin: 1rem;
+}
+
+.header ul li {
+    padding: 1rem;
+}
+
+/** Lehčí písmo tučných elementů **/
+b, strong {
+    font-weight: bolder;
+}
+
+/** Lehčí písmo v kontaktech **/
+.kontakt h5, .kontakt .kontakt__udaje {
+    font-weight: 300;
+}
+
+/** Výraznější podnadpisy **/
+h3 {
+    font-weight: bold;
+}
+
+button.button-primary, .button.button-primary, input[type="submit"].button-primary, input[type="reset"].button-primary, input[type="button"].button-primary {
+    font-size: large;
+    text-decoration: none;
+    color: #fff;
+}
+
+.button, button, input[type="submit"], input[type="reset"], input[type="button"] {
+    font-size: large;
+    text-decoration: none;
+}
+/* Výška formulářových prvků podle obsahu */
+input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
+    height: inherit;
+}
+
+/*
+// objednejte se vs rezervovat si termin??
+
+*/

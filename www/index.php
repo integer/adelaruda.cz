@@ -7,14 +7,17 @@
 
     <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/skeleton.css">
     <link rel="stylesheet" href="/css/style.css">
-
-
+    <link rel="stylesheet" href="/css/redesign.css">
 
     <title>Adéla Rudá: Psychoterapie Praha</title>
-
 
     <meta property="og:title" content="Adéla Rudá" />
     <meta property="og:type" content="profile" />
@@ -62,9 +65,8 @@
         <header class="intro row" id="intro">
             <div class=" intro__content">
                 <p class="intro__content--text">Psychoterapie</p>
-                <p class="intro__content--text">Praha<!--<br>&<br>Dobřichovice--></p>
+                <p class="intro__content--text">Praha</p>
                 <p class="intro__content--autor">Adéla Rudá</p>
-                <!--<p class="intro__content--claim">Můžete si dovolit prostor pro sebe</p>-->
                 <p class="intro__content--claim">Pomáhám budovat dobré vztahy<br>k sobě i druhým.</p>
             </div>
         </header>
@@ -75,8 +77,8 @@
         <div class="o-mne__souhrn">
             <div class="o-mne__obsah">
                 <div class="o-mne__text">
-                        <h5>Jsem gestalt terapeutka </h5>
-                        <p>Lidem pomáhám budovat pozitivní vztah k sobě samým, společně hledáme jak se mít rád/a a umět podpořit sám/a sebe. Osobně věřím,  že mít dobrý vztah sám/a k sobě je odrazovým můstkem pro vytváření naplňujících vztahů s druhými. Společná práce tak směřuje k těmto dvěma cílům, které pro mě tvoří základ životní spokojenosti.</p>
+                        <!-- <h5>Jsem gestalt terapeutka </h5> -->
+                        <p>Pomáhám lidem budovat pozitivní vztah k sobě samým, společně hledáme jak se mít rád/a a umět podpořit sám/a sebe. Osobně věřím,  že mít dobrý vztah sám/a k sobě je odrazovým můstkem pro vytváření naplňujících vztahů s druhými. Společná práce tak směřuje k těmto dvěma cílům, které pro mě tvoří základ životní spokojenosti.</p>
                 </div>
             </div>
             <div class="o-mne__info">
@@ -120,14 +122,14 @@
             
             <div class="jak-pracuji__temata">
                 <div class="jak-pracuji__tema">
-                    <h6>Vztah k sobě</h6>
+                    <h5>Vztah k sobě</h5>
                     <ul>
                         <li>pocity nedostatečnosti a selhání, nízká sebedůvěra</li>
                         <li>sebevýčitky a sebeobviňování</li>
                     </ul>
                 </div>
                 <div class="jak-pracuji__tema">
-                    <h6>Vztahy s druhými</h6>
+                    <h5>Vztahy s druhými</h5>
                     <ul>
                         <li>partnerské problémy, vztahy s rodiči, dětmi, kolegy nebo přáteli</li>
                         <li>pocity osamělosti, nedostatek vztahů a blízkosti</li>
@@ -178,7 +180,7 @@
         <p>Usiluji o to druhé nehodnotit, ale pochopit. Nejen jejich jednání ale především prožívání. Schopnost vžít se do toho, "že chodím v botách někoho jiného", mě přivádí k respektu a porozumění.</p> 
         <p>Během jednotlivých setkání ani celého procesu se neopírám o předem danou strukturu. S důvěrou a kreativitou pracuji s klienty na tom, co aktuálně přináší. </p>
         <!--<p>Moje síla není v důsledném plánování a strukturování. To, co je mi přirozené, je přijímat nové situace se zájmem a vírou, že je dokážu kreativně vyřešit.</p> -->
-        <p>V životě jsem praktická a pragmatická. V lidech podporuji učení skrze zkušenosti a zážitek.</p>
+        <p><!-- V životě jsem praktická a pragmatická. --> V lidech podporuji učení skrze zkušenosti a zážitek.</p>
     </div>
     
 
@@ -304,13 +306,14 @@ Aktuální podmínky doporučuji ověřit přímo u vaší pojišťovny.</p>
         </div>
         
         <h5>Místo setkávání:</h5> 
-            <!--    <h5>V tuto chvíli přijímám klienty pouze online.</h5> -->
             <div class="kontakt__misto">
-                <div class="kontakt__karta" style="color:grey">
+                <div class="kontakt__karta">
                     <h5>Praha</h5>
                     <p>Senovážné náměstí 23, Praha 1<br>
                     4. patro, kancelář č. 428</p>
-                    <a class="button" href="https://www.google.cz/maps/place/Senov%C3%A1%C5%BEn%C3%A9+n%C3%A1m.+23,+110+00+Nov%C3%A9+M%C4%9Bsto/@50.0851488,14.4291726,17z/data=!3m1!4b1!4m6!3m5!1s0x470b94949c98d7b3:0xb5e6728144df62f3!8m2!3d50.0851454!4d14.4317475!16s%2Fg%2F11c4x23fnw?entry=ttu&g_ep=EgoyMDI1MDIyMy4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank">
+                    <a class="button button-primary"
+                       href="https://www.google.cz/maps/place/Senov%C3%A1%C5%BEn%C3%A9+n%C3%A1m.+23,+110+00+Nov%C3%A9+M%C4%9Bsto/@50.0851488,14.4291726,17z/data=!3m1!4b1!4m6!3m5!1s0x470b94949c98d7b3:0xb5e6728144df62f3!8m2!3d50.0851454!4d14.4317475!16s%2Fg%2F11c4x23fnw?entry=ttu&g_ep=EgoyMDI1MDIyMy4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+                       target="_blank">
                         mapa
                     </a>
                 </div>
@@ -318,17 +321,6 @@ Aktuální podmínky doporučuji ověřit přímo u vaší pojišťovny.</p>
                     <h5>Online</h5>
                     <p>Online odkudkoliv, </br>kde se právě nacházíte</p>
                 </div>
-
-                
-        <!--    <div class="kontakt__karta">
-                    <h5>Dobřichovice</h5>
-                    <p>Palackého 147<br>
-                        (prostory Studia Mandala)<br>
-                    </p>
-                    <a class="button" href="https://mapy.cz/zakladni?x=14.2750851&y=49.9267495&z=17&q=palack%C3%A9ho%20147&source=addr&id=9725876&ds=2" target="_blank">
-                        mapa
-                    </a>
-                </div>-->
             </div>
 
        
@@ -336,11 +328,8 @@ Aktuální podmínky doporučuji ověřit přímo u vaší pojišťovny.</p>
             <form id="contactForm" action="">
                 <h3>Objednejte se</h3>
                 <div class="info-panel">
-                    <p style="font-weight:600">
-                    Aktuálně přijímám nové klienty.</p>
-                     <p style="font-weight:600">
-                    Preferuji objednání přes tento formulář nebo emailem na info(at)adelaruda.cz, ozvu se Vám zpět. <br>Telefonický kontakt využijte pouze v akutních případech.
-                     </p>
+                    <p>Aktuálně přijímám nové klienty.</p>
+                    <p>Preferuji objednání přes tento formulář nebo emailem na info(at)adelaruda.cz, ozvu se Vám zpět. <br>Telefonický kontakt využijte pouze v akutních případech.</p>
                 </div>
                 <div class="row">
                     <div class="six columns">
