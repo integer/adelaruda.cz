@@ -1,0 +1,270 @@
+/* ============================================================
+   Design System — Adéla Rudá
+   ============================================================ */
+
+/* Variables */
+:root {
+  --color-navy:    #123c69;
+  --color-rose:    #ac3b61;
+  --color-rose-lt: #c65a7f;
+  --color-cream:   #eee2dc;
+  --color-white:   #ffffff;
+  --color-navy-a:  rgba(18, 60, 105, 0.75);
+
+  --font-base:  'Nunito', sans-serif;
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --gap:        2rem;
+  --max-width:  860px;
+}
+
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-navy);
+  background: var(--color-white);
+}
+
+/* ── Layout ──────────────────────────────────────────────── */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.six.columns {
+  flex: 1 1 220px;
+}
+
+.u-full-width { width: 100%; }
+
+/* ── Typography ──────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+  color: var(--color-navy);
+}
+
+h1 { font-size: 2.4rem; }
+h2 { font-size: 1.9rem; border-bottom: 2px solid var(--color-rose); padding-bottom: 0.3rem; }
+h3 { font-size: 1.45rem; }
+h4 { font-size: 1.15rem; color: var(--color-rose); }
+h5 { font-size: 1rem;    font-weight: 700; }
+h6 { font-size: 0.9rem;  font-weight: 700; color: var(--color-rose); }
+
+p { margin: 0.75rem 0; }
+
+ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
+li { margin-bottom: 0.4rem; }
+
+/* ── Links ───────────────────────────────────────────────── */
+a {
+  color: var(--color-navy);
+  font-weight: 600;
+  text-decoration: underline;
+}
+a:hover {
+  color: var(--color-rose);
+  text-decoration: none;
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.button-primary,
+button.button-primary,
+a.button-primary {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: var(--color-rose-lt);
+  color: var(--color-cream);
+  border: 1px solid var(--color-rose-lt);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-base);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.button-primary:hover,
+button.button-primary:hover,
+a.button-primary:hover {
+  background: var(--color-rose);
+  border-color: var(--color-rose);
+  color: var(--color-cream);
+}
+
+/* ── Images ──────────────────────────────────────────────── */
+img { max-width: 100%; display: block; }
+
+.image-container {
+  margin: 1.5rem 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.image-container img { width: 100%; object-fit: cover; max-height: 420px; }
+
+/* ── Cards ───────────────────────────────────────────────── */
+.services-wrapped {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  margin: 1.5rem 0;
+}
+
+.service-card {
+  flex: 1 1 300px;
+  background: var(--color-cream);
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+}
+
+.kontakt__misto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.kontakt__karta {
+  background: var(--color-cream);
+  border-radius: var(--radius-sm);
+  padding: 1.5rem;
+  min-width: 220px;
+  text-align: center;
+}
+
+/* ── Contact block ───────────────────────────────────────── */
+.kontakt-karta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  align-items: flex-start;
+  margin: 1.5rem 0;
+}
+
+.kontakt-foto img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.kontakt-udaje { flex: 1 1 240px; }
+.kontakt-social { margin-top: 0.75rem; }
+.kontakt-social svg:hover { transform: scale(1.15); transition: transform 0.15s; }
+
+/* ── Forms ───────────────────────────────────────────────── */
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #bbb;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-base);
+  font-size: 0.95rem;
+  color: var(--color-navy);
+  background: var(--color-white);
+  margin-bottom: 1rem;
+  transition: border-color 0.15s;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-rose);
+}
+textarea { min-height: 120px; resize: vertical; }
+
+.kontakt__formular { margin-top: 2rem; }
+
+.info-panel {
+  background: var(--color-cream);
+  border-left: 3px solid var(--color-rose);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1.2rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.92rem;
+}
+.info-panel p { margin: 0.3rem 0; }
+
+/* ── Table ───────────────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+th {
+  background: var(--color-navy);
+  color: var(--color-cream);
+  text-align: left;
+  padding: 0.7rem 1rem;
+}
+td {
+  padding: 0.55rem 1rem;
+  border-bottom: 1px solid var(--color-cream);
+}
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: #f7f4f2; }
+
+/* ── Header / Hero ───────────────────────────────────────── */
+header {
+  background: var(--color-navy-a);
+  color: var(--color-cream);
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+header h1 { color: var(--color-cream); margin-top: 0; }
+header p  { font-size: 1.15rem; font-style: italic; }
+
+/* ── Navigation ──────────────────────────────────────────── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-navy-a);
+  backdrop-filter: blur(4px);
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 1rem;
+}
+nav ul li a {
+  display: block;
+  padding: 0.3rem 0.65rem;
+  color: var(--color-cream);
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s, color 0.15s;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  background: var(--color-cream);
+  color: var(--color-navy);
+}
