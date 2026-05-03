@@ -226,6 +226,26 @@ textarea { min-height: 120px; resize: vertical; }
 
 .kontakt__formular { margin-top: 2rem; }
 
+.form-status {
+  margin-top: 1rem;
+  padding: 0.8rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-status--ok {
+  background: #eaf6ee;
+  border-left: 3px solid #3a9e5f;
+  color: #1f6b3d;
+}
+
+.form-status--err {
+  background: #fdf0f3;
+  border-left: 3px solid var(--color-rose);
+  color: var(--color-rose);
+}
+
 .info-panel {
   background: var(--color-cream);
   border-left: 3px solid var(--color-rose);

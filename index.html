@@ -242,6 +242,7 @@
                     <textarea class="u-full-width" id="problem" name="problem" placeholder="Dobrý den, ..." required=""></textarea>
 
                     <button class="button-primary" type="submit">Odeslat</button>
+                    <div id="formStatus" class="form-status" hidden></div>
 
                 </form>
             </div>
@@ -262,6 +263,42 @@
 
     </main>
 <script>
+    document.getElementById('contactForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const form = event.target;
+        const btn = form.querySelector('button[type="submit"]');
+        const status = document.getElementById('formStatus');
+
+        btn.disabled = true;
+        btn.textContent = 'Odesílám…';
+        status.hidden = true;
+
+        const data = new URLSearchParams({
+            email:   form.email.value,
+            place:   form.place.value,
+            problem: form.problem.value,
+        });
+
+        try {
+            const res = await fetch('/sender.php', { method: 'POST', body: data });
+            const msg = await res.text();
+            if (msg.trim() === '1') {
+                status.className = 'form-status form-status--ok';
+                status.textContent = 'Zpráva je na cestě. Ozvu se Vám co nejdříve, děkuji za zájem!';
+                form.reset();
+            } else {
+                throw new Error();
+            }
+        } catch {
+            status.className = 'form-status form-status--err';
+            status.textContent = 'Něco se pokazilo. Napište mi prosím přímo na info@adelaruda.cz.';
+        } finally {
+            status.hidden = false;
+            btn.disabled = false;
+            btn.textContent = 'Odeslat';
+        }
+    });
+
     const sections = ['uvod', 'o-mne', 'sluzby', 'cenik', 'kontakt'].map(id => document.getElementById(id));
     const navLinks = document.querySelectorAll('nav a');
 
