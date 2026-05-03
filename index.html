@@ -261,5 +261,30 @@
         </div>
 
     </main>
+<script>
+    const sections = ['uvod', 'o-mne', 'sluzby', 'cenik', 'kontakt'].map(id => document.getElementById(id));
+    const navLinks = document.querySelectorAll('nav a');
+
+    function setActive(id) {
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            setActive(link.getAttribute('href').slice(1));
+        });
+    });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            setActive(entry.target.id);
+        });
+    }, { rootMargin: '-20% 0px -75% 0px' });
+
+    sections.forEach(s => s && observer.observe(s));
+</script>
 </body>
 </html>
