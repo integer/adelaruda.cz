@@ -10,6 +10,8 @@
   --color-cream:   #eee2dc;
   --color-white:   #ffffff;
   --color-navy-a:  rgba(18, 60, 105, 0.75);
+  --color-navy-b:  rgba(18, 60, 105, 0.69);
+
 
   --font-base:  'Nunito', sans-serif;
   --radius-sm:  4px;
@@ -327,7 +329,7 @@ tr:nth-child(even) td { background: #f7f4f2; }
 
 /* ── Header / Hero ───────────────────────────────────────── */
 header {
-  background: var(--color-navy-a);
+  background: var(--color-navy-b);
   color: var(--color-cream);
   padding: 1rem 1.5rem;
   text-align: center;
