@@ -124,11 +124,11 @@ img { max-width: 100%; display: block; }
 }
 
 .cenik-popis {
-  flex: 1 1 310px;
+  flex: 1 1 260px;
 }
 
 .cenik-tabulka {
-  flex: 0 1 370px;
+  flex: 0 1 420px;
   margin: 0;
 }
 
