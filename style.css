@@ -225,8 +225,8 @@ table {
   font-size: 0.95rem;
 }
 th {
-  background: var(--color-navy);
-  color: var(--color-cream);
+  background: var(--color-cream);
+  color: var(--color-rose);
   text-align: left;
   padding: 0.7rem 1rem;
 }
