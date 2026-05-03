@@ -320,6 +320,11 @@ tr:nth-child(even) td { background: #f7f4f2; }
   display: block;
 }
 
+/* ── Anchor offset for sticky nav ───────────────────────── */
+[id] {
+  scroll-margin-top: 3.5rem;
+}
+
 /* ── Header / Hero ───────────────────────────────────────── */
 header {
   background: var(--color-navy-a);
