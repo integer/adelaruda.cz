@@ -115,6 +115,23 @@ img { max-width: 100%; display: block; }
 }
 .image-container img { width: 100%; object-fit: cover; /* max-height: 420px; */ }
 
+/* ── Pricing ─────────────────────────────────────────────── */
+.cenik-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  align-items: flex-start;
+}
+
+.cenik-popis {
+  flex: 1 1 310px;
+}
+
+.cenik-tabulka {
+  flex: 0 1 370px;
+  margin: 0;
+}
+
 /* ── Cards ───────────────────────────────────────────────── */
 .services-wrapped {
   display: flex;
