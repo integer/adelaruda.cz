@@ -12,7 +12,7 @@
 <body>
     <header>
         <h1>Adéla Rudá</h1>
-        <p>Pomáhám budovat dobré vztahy k sobě i druhým.</p>
+        <p>Pomáhám budovat zdravé vztahy k sobě i druhým.</p>
     </header>
     <nav>
         <ul>
@@ -21,6 +21,13 @@
             <li><a href="#sluzby">Služby</a></li>
             <li><a href="#cenik">Ceník</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
+            <!--
+            <li class="lang-switch">
+                <a href="/" class="active">CZ</a>
+                <span>|</span>
+                <a href="/en/">EN</a>
+            </li>
+            -->
         </ul>
     </nav>
     <main>
@@ -158,7 +165,7 @@
                 </tr>
                 <tr>
                     <td>Dospělí a dospívající (15+), 50 minut</td>
-                    <td>1400 Kč</td>
+                    <td>1500 Kč</td>
                 </tr>
                 <tr>
                     <th colspan="2">Párová terapie</th>
@@ -166,6 +173,10 @@
                 <tr>
                     <td>50 minut</td>
                     <td>1800 Kč</td>
+                </tr>
+                <tr>
+                    <td>75 minut</td>
+                    <td>2200 Kč</td>
                 </tr>
             </table>
         </div>
@@ -300,7 +311,7 @@
     });
 
     const sections = ['uvod', 'o-mne', 'sluzby', 'cenik', 'kontakt'].map(id => document.getElementById(id));
-    const navLinks = document.querySelectorAll('nav a');
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
 
     function setActive(id) {
         navLinks.forEach(link => {

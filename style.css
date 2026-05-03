@@ -374,6 +374,20 @@ nav ul {
   margin: 0;
   padding: 0.5rem 1rem;
 }
+.lang-switch {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.lang-switch span {
+  color: var(--color-cream);
+  opacity: 0.4;
+}
+
 nav ul li a {
   display: block;
   padding: 0.3rem 0.65rem;
