@@ -25,7 +25,7 @@
 
 body {
   margin: 0;
-  font-family: var(--font-base);
+  font-family: var(--font-base), sans-serif;
   font-size: 1rem;
   line-height: 1.65;
   color: var(--color-navy);
@@ -92,7 +92,7 @@ a.button-primary {
   color: var(--color-cream);
   border: 1px solid var(--color-rose-lt);
   border-radius: var(--radius-sm);
-  font-family: var(--font-base);
+  font-family: var(--font-base), sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
@@ -211,7 +211,7 @@ textarea {
   padding: 0.55rem 0.75rem;
   border: 1px solid #bbb;
   border-radius: var(--radius-sm);
-  font-family: var(--font-base);
+  font-family: var(--font-base) sans-serif;
   font-size: 0.95rem;
   color: var(--color-navy);
   background: var(--color-white);
