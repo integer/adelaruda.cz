@@ -7,10 +7,11 @@
   --color-navy:    #123c69;
   --color-rose:    #ac3b61;
   --color-rose-lt: #c65a7f;
-  --color-cream:   #eee2dc;
+  --color-cream:   #f5f1ef; /* #eee2dc; */
+  --color-cream-bg: #eee2dc;
   --color-white:   #ffffff;
-  --color-navy-a:  rgba(18, 60, 105, 0.75);
-  --color-navy-b:  rgba(18, 60, 105, 0.69);
+  --color-navy-a:  rgba(18, 60, 105, 0.85); /*rgba(18, 60, 105, 0.75); */
+  --color-navy-b:  rgba(18, 60, 105, 0.75); /* rgba(18, 60, 105, 0.69); */
 
 
   --font-base:  'Nunito', sans-serif;
@@ -62,14 +63,14 @@ h1, h2, h3, h4, h5, h6 {
 h1 { font-size: 2.4rem; }
 h2 { font-size: 1.9rem; border-bottom: 2px solid var(--color-rose); padding-bottom: 0.3rem; }
 h3 { font-size: 1.45rem; }
-h4 { font-size: 1.15rem; color: var(--color-rose); }
+h4 { font-size: 1.3rem; color: var(--color-rose); }
 h5 { font-size: 1rem;    font-weight: 700; }
 h6 { font-size: 0.9rem;  font-weight: 700; color: var(--color-rose); }
 
-p { margin: 0.75rem 0; }
+p { /* margin: 0.75rem 0; */ font-size: larger; }
+p.claim { font-size: x-large; }
 
-ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; }
-li { margin-bottom: 0.4rem; }
+ul, ol { padding-left: 1.5rem; margin: 0.5rem 0; font-size: larger; }
 
 /* ── Links ───────────────────────────────────────────────── */
 a {
@@ -144,7 +145,7 @@ img { max-width: 100%; display: block; }
 
 .service-card {
   flex: 1 1 300px;
-  background: var(--color-cream);
+  background: var(--color-cream-bg);
   border-radius: var(--radius-md);
   padding: 1.8rem;
 }
@@ -158,7 +159,7 @@ img { max-width: 100%; display: block; }
 }
 
 .kontakt__karta {
-  background: var(--color-cream);
+  background: var(--color-cream-bg);
   border-radius: var(--radius-sm);
   padding: 1.5rem;
   min-width: 220px;
@@ -247,7 +248,7 @@ textarea { min-height: 120px; resize: vertical; }
 }
 
 .info-panel {
-  background: var(--color-cream);
+  background: var(--color-cream-bg);
   border-left: 3px solid var(--color-rose);
   border-radius: var(--radius-sm);
   padding: 0.9rem 1.2rem;
@@ -304,14 +305,14 @@ table {
   font-size: 0.95rem;
 }
 th {
-  background: var(--color-cream);
+  background: var(--color-cream-bg);
   color: var(--color-rose);
   text-align: left;
   padding: 0.7rem 1rem;
 }
 td {
   padding: 0.55rem 1rem;
-  border-bottom: 1px solid var(--color-cream);
+  /* border-bottom: 1px solid var(--color-cream-); */
 }
 tr:last-child td { border-bottom: none; }
 tr:nth-child(even) td { background: #f7f4f2; }
@@ -344,18 +345,26 @@ tr:nth-child(even) td { background: #f7f4f2; }
 
 /* ── Anchor offset for sticky nav ───────────────────────── */
 [id] {
-  scroll-margin-top: 3.5rem;
+  scroll-margin-top: 4rem;
 }
 
 /* ── Header / Hero ───────────────────────────────────────── */
 header {
   background: var(--color-navy-b);
   color: var(--color-cream);
-  padding: 1rem 1.5rem;
+  padding: 3rem 1.5rem 1rem; /* 1rem 1.5rem; */
   text-align: center;
 }
 header h1 { color: var(--color-cream); margin-top: 0; }
-header p  { font-size: 1.15rem; font-style: italic; }
+header p  { font-size: 1.15rem; /*font-style: italic; */
+  font-family: "Roboto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-variation-settings:
+          "wdth" 100,
+          "GRAD" 0;
+}
 
 /* ── Navigation ──────────────────────────────────────────── */
 nav {
@@ -385,7 +394,7 @@ nav ul {
 
 .lang-switch span {
   color: var(--color-cream);
-  opacity: 0.4;
+  /* opacity: 0.4; */
 }
 
 nav ul li a {
