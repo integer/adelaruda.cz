@@ -1,0 +1,207 @@
+# Design system: adelaruda.cz
+
+Style guide for the website of Mgr. Adéla Rudá, psychologist and psychotherapist in Prague.
+It describes the visual language of the site so that future changes stay consistent.
+
+- Styles: `www/style.css` (one stylesheet shared by all pages)
+- Pages: `www/index.html` (Czech, primary) and `www/en/index.html` (English mirror)
+- Plain HTML and CSS, no build step, no framework, no JavaScript libraries
+
+Sections 1 to 7 and 9 are the rules. Section 8 describes how the components are built today;
+components may change as long as they follow the rules.
+
+## 1. Character
+
+The site should feel like the practice itself: calm, warm, personal and trustworthy.
+
+- **Light and airy.** White page, soft cream surfaces, generous spacing. Nothing loud.
+- **Personal, not corporate.** Real photos of Adéla and of the office carry the visuals.
+- **Content first.** One narrow reading column with long-form text that is easy to read.
+- **Flat.** No shadows, no gradients, no textures. Depth comes only from cream surfaces on white.
+- **Restrained accent.** Navy does the work, rose marks what matters.
+
+## 2. Color
+
+| Token              | Value                     | Role                                                                                                   |
+|--------------------|---------------------------|--------------------------------------------------------------------------------------------------------|
+| `--color-navy`     | `#123c69`                 | All text, headings and links. Base of the header and navigation.                                       |
+| `--color-navy-a`   | `rgba(18, 60, 105, 0.85)` | Sticky navigation background (with `backdrop-filter: blur(4px)`).                                      |
+| `--color-navy-b`   | `rgba(18, 60, 105, 0.75)` | Header band (renders as about `#4d6d8f` on white).                                                     |
+| `--color-rose`     | `#ac3b61`                 | Accent: h2 rule, h4/h6, link hover, input focus, callout borders, table group headings, button hover.  |
+| `--color-rose-lt`  | `#c65a7f`                 | Primary button background, hover of the GDPR toggle.                                                   |
+| `--color-cream`    | `#f5f1ef`                 | Text on navy and on buttons. Lightest warm tint.                                                       |
+| `--color-cream-bg` | `#eee2dc`                 | Warm surface: cards, callouts, place cards, table headings.                                            |
+| `--color-white`    | `#ffffff`                 | Page background, form fields.                                                                          |
+
+Supporting values (not tokens): `#f7f4f2` table zebra (cream tint), `#bbb` form field border,
+success message `#eaf6ee` / `#3a9e5f` / `#1f6b3d`, error message `#fdf0f3` with rose.
+
+Rules
+
+- The palette is closed: navy, rose, cream and white. Other shades are allowed only as tints or
+  transparency of these. The only other hue is green, reserved for the success message.
+- Text is navy, never black or grey. On navy surfaces text is cream.
+- Rose is an accent for small areas (lines, small headings, hover states, buttons). Never body text,
+  never large backgrounds.
+- The photos (beige walls, brick, greenery, blue cushions) harmonise with cream and navy.
+  New colours must not compete with the photography.
+- Text meets WCAG AA contrast: 4.5:1, or 3:1 for large text (at least 18.66 px bold or 24 px regular).
+
+## 3. Typography
+
+Fonts from Google Fonts with `display=swap`:
+
+- **Nunito** 400 and 700 for everything (`--font-base`).
+- **Roboto Serif** italic 400 (optical size 8 to 144) only for the tagline under the name.
+  It is the emotional accent, never used for body text or headings.
+
+| Element             | Size                        | Weight                  | Color                  | Notes                                            |
+|---------------------|-----------------------------|-------------------------|------------------------|--------------------------------------------------|
+| Base (`body`)       | 1rem (16 px)                | 400                     | navy                   | line-height 1.65                                 |
+| Paragraphs, lists   | `larger` (about 1.2rem)     | 400                     | navy                   | main reading size, about 19 px                   |
+| Lead (`p.claim`)    | `x-large` (1.5rem)          | 400, first sentence 700 | navy                   | opening statement                                |
+| h1                  | 2.4rem                      | 700                     | navy (cream in header) |                                                  |
+| h2                  | 1.9rem                      | 700                     | navy                   | 2 px rose rule underneath                        |
+| h3                  | 1.45rem                     | 700                     | navy                   |                                                  |
+| h4                  | 1.3rem                      | 700                     | rose                   | list headings inside sections and cards          |
+| h5                  | 1rem                        | 700                     | navy                   | small card titles                                |
+| h6                  | 0.9rem                      | 700                     | rose                   |                                                  |
+| Tagline             | 1.15rem                     | Roboto Serif italic 400 | cream                  |                                                  |
+| UI text             | 0.85 to 0.95rem             | 700                     | navy / cream           | buttons, labels, fields, table, language switch  |
+
+- Headings: line-height 1.25, 2rem above, 0.5rem below.
+- Sentence case everywhere. No all-caps and no letter-spaced labels (nav links only have a slight
+  0.05rem tracking).
+- Key facts are emphasised with `<strong>` / `<b>` (for example "24 hodin předem").
+- Links: navy, underlined, weight 600 (renders as 700). On hover rose, without underline.
+
+## 4. Layout and spacing
+
+- One centered content column: `--max-width: 860px`, side padding 1.5rem, 4rem at the bottom.
+- Content (text, photos, cards) always stays inside the column. Only background surfaces
+  (header, navigation) span the full viewport width.
+- `--gap: 2rem` between cards and columns.
+- Vertical rhythm: headings 2rem above and 0.5rem below, photos and card groups 1.5rem above and below.
+- Fluid layout built on flex-wrap (cards `flex: 1 1 300px`, pricing 260 px + 420 px, form columns
+  220 px). Everything must work from 320 px wide.
+- Anchors have `scroll-margin-top: 4rem` so targets are not hidden under the sticky navigation.
+
+## 5. Shape, lines, depth
+
+- `--radius-sm: 4px`: buttons, form fields, nav pills, callouts, place cards, status messages.
+- `--radius-md: 8px`: photos, service cards.
+- `50%`: circular elements (the contact portrait).
+- Accent lines are rose: 2 px (h2 rule, GDPR content border), 3 px on the left edge of callouts
+  and status messages.
+- No shadows and no gradients. The LinkedIn logo keeps its own brand gradient.
+
+## 6. Motion
+
+- Only short state transitions: colour, background and border 0.15 s; opacity and the toggle arrow 0.2 s.
+- Hover: links turn rose, buttons darken (rose-lt to rose), logos go from 75 % to 100 % opacity,
+  the LinkedIn icon scales to 1.15.
+- No decorative animation, parallax or scroll effects.
+
+## 7. Imagery
+
+- Photos only: portraits of Adéla outdoors (`portret_zed.jpg`, `portret_strom.jpg`), the office
+  (`kancl.webp` panorama, `kancelar_detail.jpg`) and a small portrait for contact (`kontakt.jpg`, 400×400).
+- Photos are shown large, with 8 px rounded corners, `object-fit: cover`, no filters, overlays or text on top.
+- The contact portrait is a 170 px circle.
+- No illustrations, stock images or decorative icon sets. The only icon is the LinkedIn logo.
+- Partner logos (ČAP, VZP) sit at the end of the page, 130 px tall, 75 % opacity, 100 % on hover.
+- Every image has a meaningful `alt` text in the language of the page.
+
+## 8. Components (current implementation)
+
+### Header
+Full-width band in `--color-navy-b`, centered: h1 name in cream, tagline in Roboto Serif italic
+below it. Padding `3rem 1.5rem 1rem`.
+
+### Navigation
+Sticky at the top, full width, `--color-navy-a` with a 4 px backdrop blur. A centered row of links
+(cream, bold, no underline) shaped as pills: padding `0.3rem 0.65rem`, 4 px radius. Hover and
+active state: cream background, navy text. The active link follows the section in view
+(IntersectionObserver). The language switch "CZ | EN" closes the row: 0.85rem, 80 % opacity,
+2em left margin.
+
+### Section heading
+h2 with a full-width 2 px rose line underneath (`padding-bottom: 0.3rem`). Sections form one
+continuous white flow, separated only by these headings.
+
+### Lead
+`p.claim`: first sentence bold, the rest regular, `x-large`.
+
+### Photo
+`.image-container`: full column width, 8 px radius, `overflow: hidden`, 1.5rem vertical margin.
+
+### Service cards
+`.services-wrapped` is a flex row with a 2rem gap. `.service-card`: cream-bg, 8 px radius,
+1.8rem padding, `flex: 1 1 300px`. Contains an h3, an intro paragraph, an h4 in rose and a bullet list.
+
+### Lists
+Default bullets, 1.5rem indent, reading size. In "Vzdělání" the main degrees are bold and training
+programmes link to their websites.
+
+### Callout
+`.info-panel`: cream-bg background, 3 px rose left border, 4 px radius, padding `0.9rem 1.2rem`,
+slightly smaller text.
+
+### Disclosure
+`details.gdpr-toggle`: summary in rose, weight 600, with a `›` arrow that rotates 90° when open.
+The content is indented with a 2 px rose left border.
+
+### Pricing
+`.cenik-wrap`: payment description on the left (`flex: 1 1 260px`) and a table on the right
+(`flex: 0 1 420px`). Table: group headings (type of therapy) on cream-bg in rose, zebra rows
+`#f7f4f2`, 0.95rem.
+
+### Contact card
+Centered column: 170 px circular portrait, name as h3, lines for email, phone, IČ and bank account,
+a bilingual note and the LinkedIn icon (30 px).
+
+### Place cards
+`.kontakt__karta`: cream-bg, 4 px radius, 1.5rem padding, centered text, min width 220 px.
+h5 title (Praha / Online), address and a "mapa" button.
+
+### Buttons
+`.button-primary`: rose-lt background, cream text, 1 px border in the same colour, 4 px radius,
+padding `0.6rem 1.4rem`, 0.95rem bold. Hover: rose.
+
+### Form
+Bold 0.9rem labels above the fields. Fields: full width, 1 px `#bbb` border, 4 px radius, padding
+`0.55rem 0.75rem`, 0.95rem; on focus a rose border and no outline. Textarea at least 120 px high,
+vertical resize only. Two fields side by side in `.row` / `.six.columns` (they wrap under 220 px).
+The status message under the button is green on success and rose on error, both with a 3 px left border.
+
+### Logos
+`.loga`: centered wrapping row with a 1.5rem gap at the end of the page.
+
+## 9. Content and voice
+
+- Czech lives at `/`, English at `/en/`. Both pages share the same structure, the same section ids
+  (`uvod`, `o-mne`, `sluzby`, `cenik`, `kontakt`) and `style.css`. A change in one language is
+  mirrored in the other.
+- First person, warm, direct and plain. The reader is addressed with the formal "vy" (lowercase on
+  the web) and gender-inclusive forms ("sám/a", "osamělý/á").
+- No marketing hype or superlatives. Avoid typography that reads as machine-written, notably the
+  em dash (—). Czech text uses the en dash (–) only where it belongs typographically.
+- Non-breaking space after one-letter Czech prepositions and conjunctions where a line could break
+  (`i&nbsp;online`).
+- Facts that matter to clients are bold: cancellation 24 hours ahead, insurance contributions.
+
+## 10. Known deviations (state at extraction)
+
+Current inconsistencies, not part of the style:
+
+- Primary button: cream on rose-lt is about 3.6:1 at 0.95rem, below the AA rule.
+- Links and navigation use weight 600, but only 400 and 700 are loaded.
+- `Petit Formal Script` is loaded on the Czech page but never used.
+- The English page does not load Roboto Serif, so its tagline falls back to a generic serif.
+- Mixed "Vám/vám" and "Vás/vás" capitalisation in the Czech text.
+- The Czech page uses English alt text ("Office Photo") for the office photos.
+- Classes without styles: `.services-section`, `.button`, `.kontakt-položka`; one inline style
+  (`<h3 style="text-align: center;">`).
+- Unused files in `www/assets/`: `kontakt_old.jpg`, `zed.webp`, `portret-drevo.webp`,
+  `kancl-detail.webp`, `kancelar_detail.webp`.
+- Navigation links and buttons have no visible keyboard focus style.
