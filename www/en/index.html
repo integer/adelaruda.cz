@@ -6,265 +6,306 @@
     <title>Adéla Rudá - Individual and Couples Psychotherapy Prague</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Roboto+Serif:ital,opsz,wght@1,8..144,400&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-<header>
-    <h1>Adéla Rudá</h1>
-    <p>I help people build healthy relationships with themselves and others.</p>
-</header>
-<nav>
-    <ul>
-        <li><a href="#uvod" class="active">Home</a></li>
-        <li><a href="#o-mne">About</a></li>
-        <li><a href="#sluzby">Services</a></li>
-        <li><a href="#cenik">Fees</a></li>
-        <li><a href="#kontakt">Contact</a></li>
-        <li class="lang-switch">
-            <a href="/">CZ</a>
-            <span>|</span>
-            <a href="/en/" class="active">EN</a>
-        </li>
-    </ul>
+<nav class="site-nav" aria-label="Main menu">
+    <div class="nav-inner">
+        <a href="#uvod" class="nav-brand">Adéla Rudá</a>
+        <ul>
+            <li><a href="#uvod" class="active">Home</a></li>
+            <li><a href="#o-mne">About</a></li>
+            <li><a href="#sluzby">Services</a></li>
+            <li><a href="#cenik">Fees</a></li>
+            <li><a href="#kontakt">Contact</a></li>
+            <li class="lang-switch">
+                <a href="/" lang="cs" hreflang="cs">CZ</a>
+                <span aria-hidden="true">|</span>
+                <a href="/en/" class="active" aria-current="page">EN</a>
+            </li>
+        </ul>
+    </div>
 </nav>
+
+<header class="hero" id="uvod">
+    <div class="container">
+        <div class="hero-text">
+            <h1>Adéla Rudá</h1>
+            <p class="tagline">I help people build healthy relationships with themselves and others</p>
+            <p class="claim"><strong>I am a psychologist and psychotherapist trained in Gestalt therapy.</strong></p>
+            <ul class="chips">
+                <li>Individual and couples therapy</li>
+                <li>Central Prague or online</li>
+                <li>Adults and adolescents (15+)</li>
+                <li>Czech and English</li>
+            </ul>
+            <p>I will help you build relationships that support rather than drain you. Together, we will find a way to adopt a kinder attitude towards yourself and others, so you can face life's challenges with greater ease and confidence.</p>
+            <div class="hero-akce">
+                <a class="button-primary" href="#objednejte-se">Book a session</a>
+                <a class="button-secondary" href="#sluzby">How I work</a>
+            </div>
+        </div>
+        <div class="image-container hero-foto">
+            <img src="../assets/portret_zed.jpg" alt="Adéla Rudá" width="1920" height="1280" fetchpriority="high">
+        </div>
+    </div>
+</header>
+
 <main>
-    <div class="image-container" id="uvod">
-        <img src="../assets/portret_zed.jpg" alt="Portrait by a wall">
-    </div>
-
-    <p>I will help you build relationships that support rather than drain you. Together, we will find a way to adopt a kinder attitude towards yourself and others, so you can face life's challenges with greater ease and confidence.</p>
-    <ul>
-        <li><strong>Individual and couples therapy in central Prague or online</strong></li>
-        <li><strong>A safe space for adults and adolescents (15+)</strong></li>
-        <li><strong>Therapy in Czech and English</strong></li>
-    </ul>
-
-    <h2 id="o-mne">About me</h2>
-    <p>Relationships are the foundation of our wellbeing and the source of our greatest struggles. In my practice, I focus both on what happens between people and on the relationship you have with yourself.</p>
-    <p>I will help you develop a kinder attitude towards yourself, so that in difficult moments you can offer yourself support rather than criticism. I will guide you towards honest and safe relationships with others that will not leave you feeling drained. I believe that good relationships will strengthen your ability to cope with life and all challenges it brings.</p>
-    <div class="image-container">
-        <img src="../assets/portret_strom.jpg" alt="Portrait by a tree">
-    </div>
-
-    <h3>Education and experience</h3>
-    <p>My professional foundation is based on my studies in psychology at Charles University in Prague and comprehensive psychotherapy training in Gestalt therapy. I continuously develop my knowledge in areas relevant to my practice, currently focusing on couples therapy and work with adolescents. Thanks to my experience in the clinical field, I am able to offer insight into mental health issues and provide a diagnostic assessment. My further training and experience enable me to support clients in crisis situations and when working through trauma.</p>
-    <p>I am a full member of the Czech Association for Psychotherapy (ČAP) and uphold its ethical standards, continuing my professional development and regular supervision.</p>
-    <p>Drawing on my experience, I can offer an approach that is professionally grounded, yet also compassionate and tailored to your unique situation.</p>
-
-    <h4>Education</h4>
-    <div class="services-section">
-        <ul>
-            <li><strong>Psychology, Faculty of Arts, Charles University in Prague – Master’s degree, 2008–2013</strong></li>
-            <li><strong><a href="https://gestalt-praha.cz/" target="_blank">Systematic psychotherapy training in Gestalt therapy, IVGT Prague, 2016–2022</a></strong></li>
-            <li><a href="https://parova-terapie-vycvik.cz/" target="_blank">Postgraduate training in couples therapy, 2026</a></li>
-            <li>Working with adolescents, young adults and their parents using Gestalt therapy and the Violet Oaklander model – workshop led by Lynn Stadler, 2025</li>
-            <li>Mindfulness course, mindfullife.cz, 2015</li>
-            <li>Comprehensive Crisis Intervention Course, Déčko Liberec, z.s., 2014–2015</li>
-            <li>Accredited Coaching Training in the Gestalt Approach, Gestalt Essence, 2013</li>
-        </ul>
-    </div>
-
-    <h4>Clinical experience</h4>
-    <div class="services-section">
-        <ul>
-            <li>Private psychotherapeutic practice, since 2018, regulated trade: Provision of services in the field of Psychological counseling and diagnostics and Counseling psychotherapy </li>
-            <li>Psychiatry Outpatient Clinic, Psychiatrie Praha, 2019–2022, individual psychotherapy and psychodiagnostics</li>
-            <li>Psychotherapeutic Sanatorium Ondřejov, 2018–2019, individual and group psychotherapy in the Addiction Department</li>
-            <li>Psychologist in the security services (Czech Police and Czech Customs Administration), 2013–2017</li>
-        </ul>
-    </div>
-
-    <h2 id="sluzby">Services</h2>
-    <p>My work is grounded in the principles of Gestalt therapy. Approach of Gestalt therapy believes that change occurs when we gain a deeper understanding ourselves and the situation we are in, and when we are able to recognise our own needs and resources. It does not aim to judge or interpret, but to understand. It does not offer universal advice, but helps you find your own solutions.</p>
-    <p>In practice, this means I won’t just be a silent listener. I will engage in an active dialogue with you, offer feedback and help you become aware of what is happening in you right now. The goal is not merely to talk about the past, but to find your inner resources for a better present.</p>
-    <p>The first session is about getting to know each other. You will describe what brings you here, and I will explain how we can work on your issues. After three sessions we will assess together whether my approach suits you.</p>
-    <p>Thanks to online sessions and therapy in English, I can support people who travel frequently or live in an international environment.</p>
-    <h3>How we can work together:</h3>
-    <ul>
-        <li>Individual therapy for adults and adolescents aged 15 and over.</li>
-        <li>Couples therapy.</li>
-        <li>Face-to-face and/or online sessions. Both formats can be combined.</li>
-        <li>I work with clients in Czech and English.</li>
-    </ul>
-
-    <div class="image-container">
-        <img src="../assets/kancl.webp" alt="Office photo">
-    </div>
-
-    <div class="services-wrapped">
-        <div class="service-card">
-            <h3>Individual therapy</h3>
-            <p>Individual therapy is a space where you don’t have to face your struggles alone, whether you are dealing with a specific diagnosis such as depression or burnout, or feeling a general sense of unease and a loss of meaning. I will help you explore what you need in your life right now, and find the resources to make your life feel fulfilling.</p>
-            <h4>What I can help you  with:</h4>
-            <ul>
-                <li>Relationship with yourself: I don't feel comfortable in my own skin.</li>
-                <li>Relationship with others: I struggle with relationships. With my partner, friends, parents or children. I feel lonely.</li>
-                <li>Challenging life situations: Life feels overwhelming right now and I need support.</li>
-                <li>Dissatisfaction: I am unhappy and don't know what to do about it.</li>
-                <li>Emotional distress: I have experienced trauma and want to work through it. I am struggling with anxiety, depression or burnout.</li>
-            </ul>
-            <h4></h4>
-        </div>
-        <div class="service-card">
-            <h3>Couples therapy</h3>
-            <p>In couples therapy, I create a neutral environment for partners who wish to rebuild mutual trust or navigate a difficult crisis together. I will help you gain insight into your own needs and those of your relationship as a whole. Together, we will look for ways to communicate and meet those needs, so that your partnership can once again be a safe and fulfilling place.</p>
-            <h4>As a couple, you may find yourselves:</h4>
-            <ul>
-                <li>There are issues we can’t agree on and we need help resolving them.</li>
-                <li>We are going through a crisis in our relationship. Communication feels hard. You argue a lot.</li>
-                <li>There has been an affair or another breach of trust.</li>
-                <li>We are considering a break-up. We want to clarify whether to continue. We want to break up and we want a guide to help us do it properly. </li>
-            </ul>
-        </div>
-    </div>
-
     <!---- ------------ -->
-    <h2 id="cenik">Terms &amp; fees</h2>
-    <p>For your first appointment, please get in touch by email or the contact form below. The first session is about getting to know each other and agreeing on the terms of our work together. Further appointments will be arranged in person.</p>
-    <p>Effective therapeutic work depends on regularity. The standard frequency is once a week, or once a fortnight. We will agree on the right frequency together at the start of the process. I do not work at intervals longer than once a fortnight as I find it insufficiently effective.</p>
-    <p>You may cancel a session free of charge at least <b>24 hours in advance</b> either by phone or email. If you cancel later, I will charge the full amount. Thank you for respecting my time and availability.</p>
-    <p>I am involved in preventive health insurance programs that offer <b>contributions for psychotherapy</b> (for example, VZP provides up to CZK 5,000 for 10 sessions). I recommend checking the current terms and conditions directly with your insurance provider.</p>
-    <p>Confidentiality is a core principle of my work. I treat all information about you as strictly private. I adhere to the ethical code of the European Association for Psychotherapy and supervise my work regularly to ensure a safe and professional approach for my clients. My work is currently supervised by Ing. Marian Chrasta and Mgr. Jana Besperátová.</p>
-    <details class="gdpr-toggle">
-        <summary>I adhere to data protection principles.</summary>
-        <div class="gdpr-obsah">
-            <p>In accordance with Act No. 101/2000 Coll. on the Protection of Personal Data and Regulation (EU) 2016/679 of the European Parliament and of the Council (GDPR), I hereby inform my clients about how their personal data is handled and processed.</p>
-            <ul>
-                <li>I collect client data to the following extent: first name (surname is not required), phone number, and optionally email address — solely for the purposes of mutual communication (rescheduling or cancelling sessions).</li>
-                <li>This data is processed only by me and is not shared with any third party.</li>
-                <li>During therapy I take personal notes in anonymised form (clients cannot be identified from these notes, and they are not linked to the personal data listed above). They are therefore not personal data under Act No. 101/2000 Coll. and are not subject to the personal data processing measures under the above-mentioned regulations. These notes are used solely for my therapeutic work and are never accessible to third parties.</li>
-                <li>I am not a clinical psychologist and therefore do not maintain medical records as required by the relevant legislation.</li>
-            </ul>
-        </div>
-    </details>
-
-    <p>These terms and fees apply to all sessions and help us maintain clarity, mutual respect and the quality of our work together.</p>
-
-    <h3>Fees</h3>
-    <div class="cenik-wrap">
-        <div class="cenik-popis">
-            <p>Sessions are paid directly by clients:</p>
-            <ul>
-                <li>by bank transfer in advance,</li>
-                <li>by QR payment on the spot, or</li>
-                <li>on the basis of an issued invoice.</li>
-            </ul>
-            <p><b>Account number:</b> 2601377347/2010</p>
-            <p>The fee is the same for both in-person and online sessions, <br>in Czech or English.</p>
-        </div>
-        <table class="cenik-tabulka">
-            <tr>
-                <th colspan="2">Individual therapy</th>
-            </tr>
-            <tr>
-                <td>Adults and adolescents (15+), 50 minutes</td>
-                <td>1500 CZK</td>
-            </tr>
-            <tr>
-                <th colspan="2">Couples therapy</th>
-            </tr>
-            <tr>
-                <td>50 minutes</td>
-                <td>1800 CZK</td>
-            </tr>
-            <tr>
-                <td>75 minutes</td>
-                <td>2200 CZK</td>
-            </tr>
-        </table>
-    </div>
-
-    <!---- ------------ -->
-    <h2 id="kontakt">Contact</h2>
-
-    <div class="kontakt-karta">
-
-        <div class="kontakt-foto">
-            <img src="../assets/kontakt.jpg" alt="Mgr. Adéla Rudá – portrait">
-        </div>
-
-        <div class="kontakt-udaje">
-            <h3 class="kontakt-jmeno">Mgr. Adéla Rudá</h3>
-
-            <p class="kontakt-polozka">Email: <a href="mailto:info@adelaruda.cz">info@adelaruda.cz</a></p>
-            <p class="kontakt-polozka">Phone: +420 730 688 951</p>
-            <p class="kontakt-polozka">Company registration number (IČ): 07045638</p>
-            <p class="kontakt-polozka">Bank account number: 2601377347/2010</p>
-
-            <div class="kontakt-položka">
-                <p>Sessions available in Czech and English.</p>
+    <section class="section" id="o-mne">
+        <div class="container">
+            <h2>About me</h2>
+            <div class="split">
+                <div>
+                    <p>Relationships are the foundation of our wellbeing and the source of our greatest struggles. In my practice, I focus both on what happens between people and on the relationship you have with yourself.</p>
+                    <p>I will help you develop a kinder attitude towards yourself, so that in difficult moments you can offer yourself support rather than criticism. I will guide you towards honest and safe relationships with others that will not leave you feeling drained. I believe that good relationships will strengthen your ability to cope with life and all the challenges it brings.</p>
+                </div>
+                <div class="image-container split-foto">
+                    <img src="../assets/portret_strom.jpg" alt="Adéla Rudá by a brick pillar" width="1920" height="1280" loading="lazy">
+                </div>
             </div>
 
-            <div class="kontakt-social">
-                <a href="https://www.linkedin.com/in/ad%C3%A9la-rud%C3%A1-00b64a41/" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="7.025 7.025 497.951 497.95"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-974.482" y1="1306.773" x2="-622.378" y2="1658.877" gradientTransform="translate(1054.43 -1226.825)"><stop offset="0" stop-color="#2489be"></stop><stop offset="1" stop-color="#0575b3"></stop></linearGradient><path d="M256 7.025C118.494 7.025 7.025 118.494 7.025 256S118.494 504.975 256 504.975 504.976 393.506 504.976 256C504.975 118.494 393.504 7.025 256 7.025zm-66.427 369.343h-54.665V199.761h54.665v176.607zM161.98 176.633c-17.853 0-32.326-14.591-32.326-32.587 0-17.998 14.475-32.588 32.326-32.588s32.324 14.59 32.324 32.588c.001 17.997-14.472 32.587-32.324 32.587zm232.45 199.735h-54.4v-92.704c0-25.426-9.658-39.619-29.763-39.619-21.881 0-33.312 14.782-33.312 39.619v92.704h-52.43V199.761h52.43v23.786s15.771-29.173 53.219-29.173c37.449 0 64.257 22.866 64.257 70.169l-.001 111.825z" fill="url(#a)"></path></svg>
-                </a>
+            <h3>Education and experience</h3>
+            <p>My professional foundation is based on my studies in psychology at Charles University in Prague and comprehensive psychotherapy training in Gestalt therapy. I continue to develop my knowledge, currently through training focused on couples therapy and work with adolescents. Thanks to my experience in the clinical field, I can offer insight into mental health issues and a diagnostic assessment. My further training and experience enable me to support clients in crisis situations and when working through trauma.</p>
+            <p>I am a full member of the Czech Association for Psychotherapy (ČAP), uphold its ethical standards, continue my professional development and have my work regularly supervised. Drawing on my experience, I offer an approach that is professionally grounded, yet also compassionate and tailored to your unique situation.</p>
+
+            <h4>Education</h4>
+            <ul class="cv">
+                <li><span class="rok">2008–2013</span><span><strong>Psychology, Faculty of Arts, Charles University in Prague, Master’s degree</strong></span></li>
+                <li><span class="rok">2016–2022</span><span><strong><a href="https://gestalt-praha.cz/" target="_blank" rel="noopener">Systematic psychotherapy training in Gestalt therapy, IVGT Prague</a></strong></span></li>
+                <li><span class="rok">2026</span><span><a href="https://parova-terapie-vycvik.cz/" target="_blank" rel="noopener">Postgraduate training in couples therapy</a></span></li>
+                <li><span class="rok">2025</span><span>Working with adolescents, young adults and their parents using Gestalt therapy and the Violet Oaklander model, workshop led by Lynn Stadler</span></li>
+                <li><span class="rok">2015</span><span>Mindfulness course, mindfullife.cz</span></li>
+                <li><span class="rok">2014–2015</span><span>Comprehensive Crisis Intervention Course, Déčko Liberec, z.s.</span></li>
+                <li><span class="rok">2013</span><span>Accredited Coaching Training in the Gestalt Approach, Gestalt Essence</span></li>
+            </ul>
+
+            <h4>Clinical experience</h4>
+            <ul class="cv">
+                <li><span class="rok">since 2018</span><span>Private psychotherapeutic practice, regulated trade: Provision of services in the field of Psychological counseling and diagnostics and Counseling psychotherapy</span></li>
+                <li><span class="rok">2019–2022</span><span>Psychiatry Outpatient Clinic, Psychiatrie Praha, individual psychotherapy and psychodiagnostics</span></li>
+                <li><span class="rok">2018–2019</span><span>Psychotherapeutic Sanatorium Ondřejov, individual and group psychotherapy in the Addiction Department</span></li>
+                <li><span class="rok">2013–2017</span><span>Psychologist in the security services (Czech Police and Czech Customs Administration)</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!---- ------------ -->
+    <section class="section section--cream" id="sluzby">
+        <div class="container">
+            <h2>Services</h2>
+            <p>My work is grounded in the principles of Gestalt therapy. Gestalt therapy holds that change happens when we better understand ourselves and the situation we are in, and can see our own needs and resources. It does not aim to judge or interpret, but to understand. It does not offer universal advice, but helps you find your own solutions.</p>
+            <p>In practice, this means I won’t just be a silent listener. I will engage in an active dialogue with you, offer feedback and help you become aware of what is happening in you right now. The goal is not merely to talk about the past, but to find your inner resources for a better present.</p>
+
+            <h3>How we can work together</h3>
+            <ul class="dlazdice">
+                <li><strong>Individual therapy</strong>For adults and adolescents aged 15 and over.</li>
+                <li><strong>Couples therapy</strong>For partners who want to rebuild trust or get through a crisis together.</li>
+                <li><strong>In person and online</strong>In central Prague or from anywhere. Both formats can be combined.</li>
+                <li><strong>Czech and English</strong>I can also support people who travel frequently or live in an international environment.</li>
+            </ul>
+
+            <div class="image-container">
+                <img src="../assets/kancl.webp" alt="Therapy room with a sofa and an armchair" width="1920" height="762" loading="lazy">
+            </div>
+
+            <div class="services-wrapped">
+                <article class="service-card flow">
+                    <h3>Individual therapy</h3>
+                    <p>Individual therapy is a space where you don’t have to face your struggles alone, whether you are dealing with a specific diagnosis such as depression or burnout, or feeling a general sense of unease and a loss of meaning. I will help you explore what you need in your life right now, and find the resources to make your life feel fulfilling.</p>
+                    <h4>What I can help you with</h4>
+                    <ul>
+                        <li><strong>Relationship with yourself:</strong> I don't feel comfortable in my own skin.</li>
+                        <li><strong>Relationship with others:</strong> I struggle with relationships. With my partner, friends, parents or children. I feel lonely.</li>
+                        <li><strong>Challenging life situations:</strong> Life feels overwhelming right now and I need support.</li>
+                        <li><strong>Dissatisfaction:</strong> I am unhappy and don't know what to do about it.</li>
+                        <li><strong>Emotional distress:</strong> I have experienced trauma and want to work through it. I am struggling with anxiety, depression or burnout.</li>
+                    </ul>
+                </article>
+                <article class="service-card flow">
+                    <h3>Couples therapy</h3>
+                    <p>In couples therapy, I create a neutral environment for partners who wish to rebuild mutual trust or navigate a difficult crisis together. I will help you gain insight into your own needs and those of your relationship as a whole. Together, we will look for ways to communicate and meet those needs, so that your partnership can once again be a safe and fulfilling place.</p>
+                    <h4>As a couple, you may find yourselves thinking</h4>
+                    <ul>
+                        <li>There are issues we can’t agree on and we need help resolving them.</li>
+                        <li>We are going through a crisis in our relationship. Communication feels hard. We argue a lot.</li>
+                        <li>There has been an affair or another breach of trust.</li>
+                        <li>We are considering a break-up. We want to clarify whether to continue. We want to break up and we want a guide to help us do it properly.</li>
+                    </ul>
+                </article>
             </div>
         </div>
-    </div>
+    </section>
 
-    <h3 style="text-align: center;">Where we meet</h3>
-    <div class="kontakt__misto">
-        <div class="kontakt__karta">
-            <h5>Prague</h5>
-            <p>Senovážné náměstí 23, Prague 1<br>
-                4th floor, office no. 428</p>
-            <a class="button button-primary" href="https://www.google.cz/maps/place/Senov%C3%A1%C5%BEn%C3%A9+n%C3%A1m.+23,+110+00+Nov%C3%A9+M%C4%9Bsto/@50.0851488,14.4291726,17z/data=!3m1!4b1!4m6!3m5!1s0x470b94949c98d7b3:0xb5e6728144df62f3!8m2!3d50.0851454!4d14.4317475!16s%2Fg%2F11c4x23fnw?entry=ttu&amp;g_ep=EgoyMDI1MDIyMy4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank">
-                map
-            </a>
-        </div>
-        <div class="kontakt__karta">
-            <h5>Online</h5>
-            <p>Online from anywhere <br>you happen to be</p>
-        </div>
-    </div>
+    <!---- ------------ -->
+    <section class="section" id="cenik">
+        <div class="container">
+            <h2>Terms &amp; fees</h2>
 
-    <div class="kontakt__formular" id="objednejte-se">
-        <form id="contactForm" action="">
-            <h3>Book a session</h3>
+            <h3>Getting started</h3>
+            <ol class="kroky">
+                <li>
+                    <h4>Booking</h4>
+                    <p>For your first appointment, please get in touch by email or via the <a href="#objednejte-se">contact form</a>.</p>
+                </li>
+                <li>
+                    <h4>First session</h4>
+                    <p>We will get to know each other and agree on the terms of our work together. You will describe what brings you here, and I will explain how we can work on your issues. Further appointments will be arranged in person.</p>
+                </li>
+                <li>
+                    <h4>After three sessions</h4>
+                    <p>We will assess together whether my approach suits you.</p>
+                </li>
+            </ol>
+
+            <h3>Terms</h3>
+            <dl class="podminky">
+                <div>
+                    <dt>Regularity</dt>
+                    <dd>Effective therapeutic work depends on regularity. The standard frequency is once a week, or once a fortnight. We will agree on the right frequency together at the start. I do not work at longer intervals as I find them insufficiently effective.</dd>
+                </div>
+                <div>
+                    <dt>Cancellation</dt>
+                    <dd>You may cancel a session free of charge at least <b>24 hours in advance</b>, by phone or email. If you cancel later, I will charge the full amount. Thank you for respecting my time and availability.</dd>
+                </div>
+                <div>
+                    <dt>Insurance contributions</dt>
+                    <dd>I am involved in preventive health insurance programmes that offer <b>contributions for psychotherapy</b>, for example VZP provides up to CZK&nbsp;5,000 for 10 sessions. I recommend checking the current terms directly with your insurance provider.</dd>
+                </div>
+                <div>
+                    <dt>Confidentiality and supervision</dt>
+                    <dd>Confidentiality is a core principle of my work. I treat all information about you as strictly private. I adhere to the ethical code of the European Association for Psychotherapy and have my work regularly supervised to ensure a safe and professional approach. My work is currently supervised by Ing. Marian Chrasta and Mgr. Jana Besperátová.</dd>
+                </div>
+            </dl>
+
+            <details class="gdpr-toggle">
+                <summary>I adhere to data protection principles.</summary>
+                <div class="gdpr-obsah">
+                    <p>In accordance with Act No. 101/2000 Coll. on the Protection of Personal Data and Regulation (EU) 2016/679 of the European Parliament and of the Council (GDPR), I hereby inform my clients about how their personal data is handled and processed.</p>
+                    <ul>
+                        <li>I collect client data to the following extent: first name (surname is not required), phone number, and optionally email address, solely for the purposes of mutual communication (rescheduling or cancelling sessions).</li>
+                        <li>This data is processed only by me and is not shared with any third party.</li>
+                        <li>During therapy I take personal notes in anonymised form (clients cannot be identified from these notes, and they are not linked to the personal data listed above). They are therefore not personal data under Act No. 101/2000 Coll. and are not subject to the personal data processing measures under the above-mentioned regulations. These notes are used solely for my therapeutic work and are never accessible to third parties.</li>
+                        <li>I am not a clinical psychologist and therefore do not maintain medical records as required by the relevant legislation.</li>
+                    </ul>
+                </div>
+            </details>
+
+            <h3>Fees</h3>
+            <p>The fee is the same for in-person and online sessions, in Czech or English.</p>
+            <div class="cenik">
+                <div class="cena-karta">
+                    <h4>Individual therapy</h4>
+                    <p>Adults and adolescents (15+)</p>
+                    <dl class="ceny">
+                        <div><dt>50 minutes</dt><dd>1,500&nbsp;CZK</dd></div>
+                    </dl>
+                </div>
+                <div class="cena-karta">
+                    <h4>Couples therapy</h4>
+                    <dl class="ceny">
+                        <div><dt>50 minutes</dt><dd>1,800&nbsp;CZK</dd></div>
+                        <div><dt>75 minutes</dt><dd>2,200&nbsp;CZK</dd></div>
+                    </dl>
+                </div>
+            </div>
+
             <div class="info-panel">
-                <p>I have availability and am accepting new clients.</p>
-                <p>I prefer bookings via this form or by email at info(at)adelaruda.cz, I will get back to you. <br>Please use the phone number only in urgent cases.</p>
-            </div>
-            <div class="row">
-                <div class="six columns">
-                    <label for="email">Email</label>
-                    <input class="u-full-width" type="text" id="email" name="email" placeholder="Your email" required="">
-                </div>
-
-                <div class="six columns">
-                    <label for="place">Location</label>
-                    <select class="u-full-width" name="place" id="place">
-                        <option value="praha">Prague, Senovážné náměstí 23</option>
-                        <option value="online">Online only</option>
-                    </select>
-                </div>
+                <p>Sessions are paid directly by clients: by bank transfer in advance, by QR payment on the spot, or on the basis of an issued invoice.</p>
+                <p><b>Account number:</b> 2601377347/2010</p>
             </div>
 
-            <label for="problem">Message</label>
-            <textarea class="u-full-width" id="problem" name="problem" placeholder="Hello, ..." required=""></textarea>
+            <p>These terms and fees apply to all sessions and help us maintain clarity, mutual respect and the quality of our work together.</p>
+        </div>
+    </section>
 
-            <button class="button-primary" type="submit">Send</button>
-            <div id="formStatus" class="form-status" hidden></div>
+    <!---- ------------ -->
+    <section class="section section--cream" id="kontakt">
+        <div class="container">
+            <h2>Contact</h2>
 
-        </form>
-    </div>
+            <div class="kontakt-grid">
+                <div class="karta kontakt-karta">
+                    <div class="kontakt-foto">
+                        <img src="../assets/kontakt.jpg" alt="Mgr. Adéla Rudá - portrait" width="400" height="400" loading="lazy">
+                    </div>
+                    <h3 class="kontakt-jmeno">Mgr. Adéla Rudá</h3>
+                    <p class="kontakt-polozka">Email: <a href="mailto:info@adelaruda.cz">info@adelaruda.cz</a></p>
+                    <p class="kontakt-polozka">Phone: +420 730 688 951</p>
+                    <p class="kontakt-polozka">Company ID (IČ): 07045638</p>
+                    <p class="kontakt-polozka">Bank account: 2601377347/2010</p>
+                    <p class="kontakt-jazyky">Sessions available in Czech and English.</p>
+                    <a class="kontakt-social" href="https://www.linkedin.com/in/ad%C3%A9la-rud%C3%A1-00b64a41/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="7.025 7.025 497.951 497.95" aria-hidden="true"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="-974.482" y1="1306.773" x2="-622.378" y2="1658.877" gradientTransform="translate(1054.43 -1226.825)"><stop offset="0" stop-color="#2489be"></stop><stop offset="1" stop-color="#0575b3"></stop></linearGradient><path d="M256 7.025C118.494 7.025 7.025 118.494 7.025 256S118.494 504.975 256 504.975 504.976 393.506 504.976 256C504.975 118.494 393.504 7.025 256 7.025zm-66.427 369.343h-54.665V199.761h54.665v176.607zM161.98 176.633c-17.853 0-32.326-14.591-32.326-32.587 0-17.998 14.475-32.588 32.326-32.588s32.324 14.59 32.324 32.588c.001 17.997-14.472 32.587-32.324 32.587zm232.45 199.735h-54.4v-92.704c0-25.426-9.658-39.619-29.763-39.619-21.881 0-33.312 14.782-33.312 39.619v92.704h-52.43V199.761h52.43v23.786s15.771-29.173 53.219-29.173c37.449 0 64.257 22.866 64.257 70.169l-.001 111.825z" fill="url(#a)"></path></svg>
+                    </a>
+                </div>
 
-    <div class="image-container">
-        <img src="../assets/kancelar_detail.jpg" alt="Office photo">
-    </div>
+                <div class="karta kontakt__formular" id="objednejte-se">
+                    <form id="contactForm" action="">
+                        <h3>Book a session</h3>
+                        <div class="info-panel">
+                            <p>I have availability and am accepting new clients.</p>
+                            <p>I prefer bookings via this form or by email at info(at)adelaruda.cz, I will get back to you. Please use the phone number only in urgent cases.</p>
+                        </div>
+                        <div class="row">
+                            <div class="six columns">
+                                <label for="email">Email</label>
+                                <input class="u-full-width" type="email" id="email" name="email" placeholder="Your email" autocomplete="email" required>
+                            </div>
 
-    <div class="loga">
-        <a href="https://czap.cz/Sys/PublicProfile/79903226/5485226" class="logo-odkaz" target="_blank">
-            <img src="../assets/cap-logo.png" alt="Czech Association for Psychotherapy – full member">
-        </a>
-        <a href="https://dusevnizdravi.vzp.cz/informace-o-prispevku/" class="logo-odkaz" target="_blank">
-            <img src="../assets/vzp-banner.png" alt="VZP – psychotherapy contribution">
-        </a>
-    </div>
+                            <div class="six columns">
+                                <label for="place">Location</label>
+                                <select class="u-full-width" name="place" id="place">
+                                    <option value="praha">Prague, Senovážné náměstí 23</option>
+                                    <option value="online">Online only</option>
+                                </select>
+                            </div>
+                        </div>
 
+                        <label for="problem">Message</label>
+                        <textarea class="u-full-width" id="problem" name="problem" placeholder="Hello, ..." required></textarea>
+
+                        <button class="button-primary" type="submit">Send</button>
+                        <div id="formStatus" class="form-status" hidden></div>
+                    </form>
+                </div>
+            </div>
+
+            <h3>Where we meet</h3>
+            <div class="misto">
+                <div class="image-container misto-foto">
+                    <img src="../assets/kancelar_detail.jpg" alt="Therapy room at Senovážné náměstí" width="1920" height="1441" loading="lazy">
+                </div>
+                <div class="misto-karty">
+                    <div class="kontakt__karta">
+                        <h4>Prague</h4>
+                        <p>Senovážné náměstí 23, Prague 1<br>
+                        4th floor, office no. 428</p>
+                        <a class="button-primary" href="https://www.google.cz/maps/place/Senov%C3%A1%C5%BEn%C3%A9+n%C3%A1m.+23,+110+00+Nov%C3%A9+M%C4%9Bsto/@50.0851488,14.4291726,17z/data=!3m1!4b1!4m6!3m5!1s0x470b94949c98d7b3:0xb5e6728144df62f3!8m2!3d50.0851454!4d14.4317475!16s%2Fg%2F11c4x23fnw?entry=ttu&amp;g_ep=EgoyMDI1MDIyMy4xIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D" target="_blank" rel="noopener">map</a>
+                    </div>
+                    <div class="kontakt__karta">
+                        <h4>Online</h4>
+                        <p>Online from anywhere <br>you happen to be</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
+
+<footer class="site-footer">
+    <div class="container loga">
+        <a href="https://czap.cz/Sys/PublicProfile/79903226/5485226" class="logo-odkaz" target="_blank" rel="noopener">
+            <img src="../assets/cap-logo.png" alt="Czech Association for Psychotherapy – full member" width="500" height="500" loading="lazy">
+        </a>
+        <a href="https://dusevnizdravi.vzp.cz/informace-o-prispevku/" class="logo-odkaz" target="_blank" rel="noopener">
+            <img src="../assets/vzp-banner.png" alt="VZP – psychotherapy contribution" width="1000" height="200" loading="lazy">
+        </a>
+    </div>
+</footer>
 <script>
     document.getElementById('contactForm').addEventListener('submit', async function(event) {
         event.preventDefault();
@@ -287,7 +328,7 @@
             const msg = await res.text();
             if (msg.trim() === '1') {
                 status.className = 'form-status form-status--ok';
-                status.textContent = 'Your message is on its way. I will get back to you as soon as possible — thank you for your interest!';
+                status.textContent = 'Your message is on its way. I will get back to you as soon as possible. Thank you for your interest!';
                 form.reset();
             } else {
                 throw new Error();
@@ -303,7 +344,7 @@
     });
 
     const sections = ['uvod', 'o-mne', 'sluzby', 'cenik', 'kontakt'].map(id => document.getElementById(id));
-    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    const navLinks = document.querySelectorAll('nav li a[href^="#"]');
 
     function setActive(id) {
         navLinks.forEach(link => {

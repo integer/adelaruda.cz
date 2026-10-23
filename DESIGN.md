@@ -114,68 +114,99 @@ Fonts from Google Fonts with `display=swap`:
 
 ## 8. Components (current implementation)
 
-### Header
-Full-width band in `--color-navy-b`, centered: h1 name in cream, tagline in Roboto Serif italic
-below it. Padding `3rem 1.5rem 1rem`.
-
 ### Navigation
-Sticky at the top, full width, `--color-navy-a` with a 4 px backdrop blur. A centered row of links
-(cream, bold, no underline) shaped as pills: padding `0.3rem 0.65rem`, 4 px radius. Hover and
-active state: cream background, navy text. The active link follows the section in view
-(IntersectionObserver). The language switch "CZ | EN" closes the row: 0.85rem, 80 % opacity,
-2em left margin.
+Sticky at the top, full width, `--color-navy-a` with a 4 px backdrop blur. Inside the 860 px column
+the name "Adéla Rudá" sits on the left (cream, bold, hidden under 820 px) and the links on the right.
+Links are cream pills: bold, no underline, padding `0.3rem 0.65rem`, 4 px radius. Hover and active
+state: cream background, navy text. The active link follows the section in view
+(IntersectionObserver). The language switch "CZ | EN" closes the row: 0.85rem, 80 % opacity.
+On narrow screens the links wrap and are centered.
+
+### Hero
+`header.hero` (`#uvod`): full-width cream band. From 760 px two columns (text 1.1fr, photo 0.9fr),
+stacked below. Text: h1 name, tagline (Roboto Serif italic 1.15rem, navy), lead `p.claim`,
+chips with key facts, intro paragraph and two buttons (primary to the booking form, secondary to
+the services). Photo: `portret_zed.jpg` in a 2:3 portrait crop (4:3 on small screens), 8 px radius.
+
+### Sections
+`section.section`: 4.5rem vertical padding (3rem on small screens). `.section--cream` alternates the
+background: hero cream, O mně white, Služby cream, Podmínky a ceník white, Kontakt cream, footer white.
+Surfaces inside a cream section are white, surfaces inside a white section are cream-bg.
 
 ### Section heading
-h2 with a full-width 2 px rose line underneath (`padding-bottom: 0.3rem`). Sections form one
-continuous white flow, separated only by these headings.
+h2 followed by a short rose line, 3.5rem × 2 px (`h2::after`).
 
 ### Lead
-`p.claim`: first sentence bold, the rest regular, `x-large`.
+`p.claim`: bold statement, `x-large`.
+
+### Chips
+`.chips`: key facts in the hero. White background, 4 px radius, 0.95rem bold navy, wrapping row.
 
 ### Photo
-`.image-container`: full column width, 8 px radius, `overflow: hidden`, 1.5rem vertical margin.
+`.image-container`: 8 px radius, `overflow: hidden`, 1.5rem vertical margin. `.split` places text
+and a photo side by side from 760 px, photo on the left in a 4:5 crop.
+
+### Timeline
+`.cv` for education and practice: rows divided by 1 px cream-bg lines, the period in a 7.5rem left
+column (0.95rem bold rose), the description on the right. Under 560 px the period sits above the
+text. Main degrees are bold, training programmes link to their websites.
+
+### Tiles
+`.dlazdice` for the forms of cooperation: grid with 300 px minimum columns, white tiles with 8 px
+radius, a bold 1.3rem title and one sentence.
 
 ### Service cards
-`.services-wrapped` is a flex row with a 2rem gap. `.service-card`: cream-bg, 8 px radius,
-1.8rem padding, `flex: 1 1 300px`. Contains an h3, an intro paragraph, an h4 in rose and a bullet list.
+`.services-wrapped` grid (300 px minimum columns, 2rem gap). `.service-card`: white, 8 px radius,
+1.8rem padding. Contains an h3, an intro paragraph, an h4 in rose and a bullet list with rose
+markers and bold labels.
 
-### Lists
-Default bullets, 1.5rem indent, reading size. In "Vzdělání" the main degrees are bold and training
-programmes link to their websites.
+### Steps
+`.kroky`: numbered vertical steps. The number sits in a 2.5rem cream-bg circle, a 2 px cream-bg line
+connects the steps, the title is an h4 in rose followed by a short paragraph.
+
+### Terms
+`.podminky`: definition rows with a bold title in a 12rem left column and the text on the right,
+divided by 1 px cream-bg lines. Stacked under 640 px.
 
 ### Callout
 `.info-panel`: cream-bg background, 3 px rose left border, 4 px radius, padding `0.9rem 1.2rem`,
-slightly smaller text.
+text 1.1rem. Used for the booking note in the form and for the payment details.
 
 ### Disclosure
-`details.gdpr-toggle`: summary in rose, weight 600, with a `›` arrow that rotates 90° when open.
+`details.gdpr-toggle`: summary in rose, bold, with a `›` arrow that rotates 90° when open.
 The content is indented with a 2 px rose left border.
 
 ### Pricing
-`.cenik-wrap`: payment description on the left (`flex: 1 1 260px`) and a table on the right
-(`flex: 0 1 420px`). Table: group headings (type of therapy) on cream-bg in rose, zebra rows
-`#f7f4f2`, 0.95rem.
+`.cenik` holds two `.cena-karta` cards: cream-bg, 8 px radius, 1.8rem padding. Each has an h4
+with the type of therapy, optionally who it is for, and rows "duration / price" divided by white
+lines. Prices are 1.45rem bold and use a non-breaking space as the thousands separator (1 500 Kč).
 
-### Contact card
-Centered column: 170 px circular portrait, name as h3, lines for email, phone, IČ and bank account,
-a bilingual note and the LinkedIn icon (30 px).
+### Contact
+`.kontakt-grid`: two white cards (5fr / 7fr from 760 px). The contact card is centered: 170 px
+circular portrait, name as h3, email, phone, IČ, bank account, a bilingual note and the LinkedIn
+icon (30 px). The second card holds the booking form.
 
-### Place cards
-`.kontakt__karta`: cream-bg, 4 px radius, 1.5rem padding, centered text, min width 220 px.
-h5 title (Praha / Online), address and a "mapa" button.
+### Where we meet
+`.misto`: the office photo next to two stacked place cards. `.kontakt__karta`: white, 4 px radius,
+1.5rem padding, h4 title (Praha / Online), address and a "mapa" button.
 
 ### Buttons
 `.button-primary`: rose-lt background, cream text, 1 px border in the same colour, 4 px radius,
-padding `0.6rem 1.4rem`, 0.95rem bold. Hover: rose.
+padding `0.6rem 1.4rem`, 1.2rem bold. Hover: rose. `.button-secondary`: transparent with a 1 px navy
+border and navy text; on hover it fills navy with cream text.
 
 ### Form
 Bold 0.9rem labels above the fields. Fields: full width, 1 px `#bbb` border, 4 px radius, padding
-`0.55rem 0.75rem`, 0.95rem; on focus a rose border and no outline. Textarea at least 120 px high,
-vertical resize only. Two fields side by side in `.row` / `.six.columns` (they wrap under 220 px).
-The status message under the button is green on success and rose on error, both with a 3 px left border.
+`0.55rem 0.75rem`, 0.95rem; on focus a rose border and a 1 px rose outline. Textarea at least 120 px
+high, vertical resize only. Email and place sit side by side in `.row` / `.six.columns` (they wrap
+under 220 px). The status message under the button is green on success and rose on error, both
+with a 3 px left border.
 
-### Logos
-`.loga`: centered wrapping row with a 1.5rem gap at the end of the page.
+### Focus
+Keyboard focus shows a 2 px rose outline with a 2 px offset (`:focus-visible`).
+
+### Footer
+`footer.site-footer` on white with the partner logos `.loga`: centered wrapping row, 1.5rem gap.
 
 ## 9. Content and voice
 
@@ -190,18 +221,16 @@ The status message under the button is green on success and rose on error, both 
   (`i&nbsp;online`).
 - Facts that matter to clients are bold: cancellation 24 hours ahead, insurance contributions.
 
-## 10. Known deviations (state at extraction)
+## 10. Known deviations
 
 Current inconsistencies, not part of the style:
 
-- Primary button: cream on rose-lt is about 3.6:1 at 0.95rem, below the AA rule.
-- Links and navigation use weight 600, but only 400 and 700 are loaded.
-- `Petit Formal Script` is loaded on the Czech page but never used.
-- The English page does not load Roboto Serif, so its tagline falls back to a generic serif.
-- Mixed "Vám/vám" and "Vás/vás" capitalisation in the Czech text.
-- The Czech page uses English alt text ("Office Photo") for the office photos.
-- Classes without styles: `.services-section`, `.button`, `.kontakt-položka`; one inline style
-  (`<h3 style="text-align: center;">`).
+- Buttons use 1.2rem instead of the 0.85 to 0.95rem UI text size. Cream on rose-lt reaches only
+  about 3.6:1, which meets WCAG AA for large bold text but not at the smaller size, so the two rules
+  cannot both hold with the current button colours.
+- Section 4 names flex-wrap widths (cards 300 px, pricing 260 + 420 px). Layouts now use CSS grid
+  with the same 300 px minimum column.
+- `--color-navy-b` is defined but unused: the header is now a cream hero, so the tagline and h1 are
+  navy instead of cream.
 - Unused files in `www/assets/`: `kontakt_old.jpg`, `zed.webp`, `portret-drevo.webp`,
   `kancl-detail.webp`, `kancelar_detail.webp`.
-- Navigation links and buttons have no visible keyboard focus style.
